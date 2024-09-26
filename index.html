@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mad Lib</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <h1>Mad Lib</h1>
+    <hr />
+    <h2>Mad Lib Instructions</h2>
+    <p>
+      Fill in all of the input boxes, then click the <em>"Mad Lib"</em> button.
+    </p>
+    <ol type="I">
+      <li>Plural Noun: <input type="text" id="plurInput" /></li>
+      <li>Adjective: <input type="text" id="adjInput" /></li>
+      <li>Present Tense Verb: <input type="text" id="ptvInput" /></li>
+      <li>Noun: <input type="text" id="nounInput" /></li>
+    </ol>
+    <p>
+      <button onclick="madLib()" id="button1">Mad Lib</button>
+      <button onclick="madLib2()" id="button2">Mad Lib 2</button>
+    </p>
+    <script>
+      function madLib() {
+        var plurNoun = document.getElementById("plurInput").value;
+        var adjective = document.getElementById("adjInput").value;
+        var prsTnsVrb = document.getElementById("ptvInput").value;
+        var noun = document.getElementById("nounInput").value;
+        if (!plurNoun || !adjective || !prsTnsVrb || !noun) {
+          alert("Error: One or more of the boxes is missing a word.");
+        } else {
+          document.getElementById("txt").style.border = "1px solid orange";
+          document.getElementById("txt").style.padding = "20px";
+          document.getElementById("txt").style.fontSize = "18px";
+          document.getElementById("txt").style.lineHeight = "25px";
+          document.getElementById("txt").style.letterSpacing = "0.5px";
+          document.getElementById("txt").innerHTML =
+            "'There are too many " +
+            plurNoun +
+            " " +
+            "on this " +
+            adjective +
+            " " +
+            "airplane!' I screamed. 'Somebody has to " +
+            prsTnsVrb +
+            " " +
+            "on the " +
+            noun +
+            " " +
+            "to solve this problem!'";
+        }
+      }
+    </script>
+    <script>
+      function madLib2() {
+        var plurNoun = document.getElementById("plurInput").value;
+        var adjective = document.getElementById("adjInput").value;
+        var prsTnsVrb = document.getElementById("ptvInput").value;
+        var noun = document.getElementById("nounInput").value;
+        if (!plurNoun || !adjective || !prsTnsVrb || !noun) {
+          alert("Error: One or more of the boxes is missing a word.");
+        } else {
+          document.getElementById("txt").style.border = "1px solid orange";
+          document.getElementById("txt").style.padding = "20px";
+          document.getElementById("txt").style.fontSize = "18px";
+          document.getElementById("txt").style.lineHeight = "25px";
+          document.getElementById("txt").style.letterSpacing = "0.5px";
+          document.getElementById("txt").innerHTML = "SEND HELP";
+        }
+      }
+    </script>
+    <hr />
+    <p id="txt"></p>
+  </body>
+</html>
